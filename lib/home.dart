@@ -57,12 +57,14 @@ class Home extends StatelessWidget {
                       onPressed: () {
                         // Define your button action here
                       },
-                      style: ElevatedButton.styleFrom( 
-                        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            const Color.fromARGB(255, 255, 255, 255),
                       ),
-                      child: const Text( 
+                      child: const Text(
                         'Add Points',
-                        style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0), fontSize: 16),
                       ),
                     ),
                   ],
@@ -70,13 +72,32 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 29,),
-          Container( height: 400,width: 420, color:const  Color.fromARGB(255, 23, 23, 23),
-          child: const Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Text('History',style: TextStyle(fontSize: 24,color: Colors.white),),
-          ),)
-          
+          const SizedBox(
+            height: 29,
+          ),
+          Container(
+            height: 200,
+            width: 420,
+            color: const Color.fromARGB(255, 23, 23, 23),
+            child: const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Text(
+                'History',
+                style: TextStyle(fontSize: 22, color: Colors.white),
+              ),
+            ),
+          ),
+          Expanded(child: ListView(
+            children: const[ ],
+          )),
+          FloatingActionButton.large(
+            onPressed: () {},
+            child: const Icon(
+              Icons.qr_code_scanner_rounded,
+              color: Colors.black,
+              size: 55,
+            ),
+          )
         ],
       ),
     );
