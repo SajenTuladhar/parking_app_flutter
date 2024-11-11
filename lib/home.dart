@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parking_app/qr_button.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -95,13 +96,13 @@ class Home extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.large(
-        onPressed: () {},
+        onPressed: ()=> openQRDialog(context),
         shape: const CircleBorder(),
         backgroundColor: Colors.white,
         child: const Icon(
           Icons.qr_code_scanner_rounded,
           color: Colors.black,
-          size: 58,
+          size: 52,
         ),
       ),
       //FloatingActionButtonLocation.centerDocked,
