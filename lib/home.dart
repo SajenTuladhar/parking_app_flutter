@@ -87,18 +87,48 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: ListView(
-            children: const[ ],
+          Expanded(
+              child: ListView(
+            children: const [],
           )),
-          FloatingActionButton.large(
-            onPressed: () {},
-            child: const Icon(
-              Icons.qr_code_scanner_rounded,
-              color: Colors.black,
-              size: 55,
-            ),
-          )
         ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton.large(
+        onPressed: () {},
+        shape: const CircleBorder(),
+        backgroundColor: Colors.white,
+        child: const Icon(
+          Icons.qr_code_scanner_rounded,
+          color: Colors.black,
+          size: 58,
+        ),
+      ),
+      //FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 14,
+        height: 70,
+        shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              padding: const EdgeInsets.only(left: 35),
+              onPressed: () {},
+              icon: const Icon(Icons.home),
+              iconSize: 38,
+              color: Colors.black,
+            ),
+            IconButton(
+              padding: const EdgeInsets.only(right: 35),
+              onPressed: () {},
+              icon: const Icon(Icons.settings),
+              iconSize: 37.5,
+              color: Colors.black,
+            )
+          ],
+        ),
       ),
     );
   }
