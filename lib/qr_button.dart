@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parking_app/qr_scanner.dart';
 
 void openQRDialog(BuildContext context) {
   showDialog(
@@ -13,21 +14,13 @@ void openQRDialog(BuildContext context) {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
           ),
           actions: [
-            // IconButton(
-            //    onPressed: () {},
-            //    padding: const EdgeInsets.all(33),
-            //    icon: const Icon(
-            //      Icons.two_wheeler,
-            //      color: Colors.black,
-            //         size: 50,
-            //    )),
-
-            //const IntrinsicHeight(child: VerticalDivider(color: Colors.black,thickness: 10,)),
             IntrinsicHeight(
               child: Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const QrScanner()));
+                      },
                       padding: const EdgeInsets.all(40),
                       icon: const Icon(
                         Icons.two_wheeler,
@@ -50,16 +43,6 @@ void openQRDialog(BuildContext context) {
                 ],
               ),
             ),
-
-            //IconButton(
-            //  onPressed: () {},
-            //  padding: const EdgeInsets.all(33),
-            //  icon: const Icon(
-            //     Icons.car_repair,
-            //     color: Colors.black,
-            //      size: 50,
-            //    ),
-            //    ),
           ],
         );
       });
